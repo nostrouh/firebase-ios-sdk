@@ -1031,6 +1031,7 @@ let package = Package(
         "FirebaseInstallations",
         "FirebaseRemoteConfigInterop",
         .product(name: "GULNSData", package: "GoogleUtilities"),
+        .product(name: "GULEnvironment", package: "GoogleUtilities"),
       ],
       path: "FirebaseRemoteConfig/Sources",
       publicHeadersPath: "Public",
@@ -1382,7 +1383,7 @@ let package = Package(
 // MARK: - Helper Functions
 
 func googleAppMeasurementDependency() -> Package.Dependency {
-  let appMeasurementURL = "https://github.com/google/GoogleAppMeasurement.git"
+  let appMeasurementURL = "https://github.com/nostrouh/GoogleAppMeasurement.git"
 
   // Point SPM CI to the tip of main of https://github.com/google/GoogleAppMeasurement so that the
   // release process can defer publishing the GoogleAppMeasurement tag until after testing.
@@ -1390,7 +1391,7 @@ func googleAppMeasurementDependency() -> Package.Dependency {
     return .package(url: appMeasurementURL, branch: "main")
   }
 
-  return .package(url: appMeasurementURL, exact: "11.15.0")
+  return .package(url: appMeasurementURL, branch: "main")
 }
 
 func abseilDependency() -> Package.Dependency {
