@@ -27,6 +27,8 @@ internal import GoogleDataTransport
   internal import GoogleUtilities
 #endif // SWIFT_PACKAGE
 
+import nanopb
+
 ///
 /// SessionStartEvent is responsible for:
 ///   1) Writing fields to the Session proto
