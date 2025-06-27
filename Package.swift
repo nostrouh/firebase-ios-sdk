@@ -1126,6 +1126,7 @@ let package = Package(
         .product(name: "GoogleDataTransport", package: "GoogleDataTransport"),
         .product(name: "GULEnvironment", package: "GoogleUtilities"),
         .product(name: "GULUserDefaults", package: "GoogleUtilities"),
+        .product(name: "nanopb", package: "nanopb"),
       ],
       path: "FirebaseSessions/Sources",
       cSettings: [
